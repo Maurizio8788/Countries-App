@@ -1,0 +1,32 @@
+<button type="button" class="btn btn-light shadow" (click)="back()"><i class="fa fa-arrow-left"></i> BACK</button>
+<div class="row mt-5" *ngIf="country">
+    <div class="col-lg-6 col-sm-12">
+        <img class="img-fluid" src="{{country.flag}}" alt="{{country.name}}" />
+    </div>
+    <div class="col-lg-6 col-sm-12">
+        <h1><b>{{country.name}}</b></h1>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <p><b>Native Name:</b> {{ country.native_name }}</p>
+                <p><b>Population</b> {{ country.population }}</p>
+                <p><b>Region:</b> {{ country.region }}</p>
+                <p><b>Sub Region:</b> {{ country.sub_region }}</p>
+                <p><b>Capital:</b> {{ country.capital }}</p>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <p><b>Top Level Domain:</b> {{ country.top_level_domain }}</p>
+                <p><b>Currencies:</b> {{ country.currencies }}</p>
+                <p><b>Languages:</b> {{ country.languages }}</p>
+            </div>
+            <div class="col-sm-12">
+                <div class="d-flex align-items-center">
+                    <h5 class="w-50">Border Countries:</h5>
+                    <div class="btn-group d-block" *ngFor="let brd of country.borders.split(',')">
+                        <h6><span class="badge badge-light ml-2" >{{ brd }}</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

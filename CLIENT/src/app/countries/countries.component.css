@@ -1,0 +1,12 @@
+.card{
+    height: 100%;
+}
+
+.card-img-top{
+    height: 168px;
+}
+
+.pagination{
+    position: relative;
+    bottom: 0;
+}

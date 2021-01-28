@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-ligth bg-ligth fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Where in the world?</a>
+    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+         <label for="darkMode" class="mt-2"><input id="darkMode" type="checkbox" class="nav-link d-none" [checked]="darkMode$ | async" (change)="onToggle()" ><i [ngClass]="!darkModeActive ? 'far fa-moon' : 'fas fa-moon' "></i> Dark mode</label>
+        </li>
+      </ul>
+      
+  </div>
+</nav>

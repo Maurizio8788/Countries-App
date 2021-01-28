@@ -1,0 +1,20 @@
+<form class="mt-5" [formGroup]="countryForm">
+  <div class="row">
+    <div class="col-lg-4">
+      <input
+        type="text"
+        class="form-control shadow-sm"
+        placeholder="Search for a country..."
+        formControlName="inputCountry"
+      />
+    </div>
+    <div class="col-lg-3 offset-lg-5 mt-3 mt-lg-0">
+      <select class="form-control" formControlName="regionFilter">
+        <option *ngFor="let region of regions" value="{{region}}">
+          {{ region | titlecase }}
+        </option>
+      </select>
+    </div>
+  </div>
+</form>
+<app-countries></app-countries>

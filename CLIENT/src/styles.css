@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:after,
+*:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    color:  hsl(200, 15%, 8%);
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color: #dfe6e9;
+}
+
+.dark-mode .card,
+.dark-mode .navbar,
+.dark-mode .navbar-brand,
+.dark-mode input,
+.dark-mode select,
+.dark-mode button,
+.dark-mode .badge,
+.dark-mode .pagination .page-item a,
+.dark-mode input:focus,
+.dark-mode select:focus{
+    background: hsl(209, 23%, 22%);
+    color:hsl(0, 0%, 100%);
+    border: none;
+    outline: none;
+}
+
+.dark-mode .navbar-brand{
+    font-weight: 800;
+}
+
+.light-mode {
+    background-color:  hsl(0, 0%, 98%);
+    color: #2d3436;
+}
+.light-mode .navbar-brand {
+    color:  hsl(200, 15%, 8%);
+    font-weight: 800;
+}
+
+.light-mode .navbar {
+    background: #fff;
+}
+
+  body:not(.dark-mode-preloading ) {
+    transition: all .3s linear; 
+ } 
